@@ -1,21 +1,46 @@
 {
   "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
-  "@type": "Dataset",
-  "name": "Attitudes towards Open Science and Data Sharing: Global Dataset of Researcher Surveys (2018-2024)",
-  "identifier": "10.5281/zenodo.18881242",
-  "url": "https://doi.org/10.5281/zenodo.18881242",
+  "@type": "SoftwareSourceCode",
+  "name": "This dataset compiles quantitative data from international surveys (2018-2024) on attitudes of academic researchers towards open science and data sharing. Includes five key analytical dimensions: (1) Willingness to share data by discipline; (2) Repos",
+  "description": "This dataset compiles quantitative data from international surveys (2018-2024) on attitudes of academic researchers towards open science and data sharing. Includes five key analytical dimensions: (1) Willingness to share data by discipline; (2) Repos",
+  "url": "https://github.com/juanmoisesd/attitudes-towards-open-science-and-data-sharing-global-dataset-of-researcher-sur",
+  "codeRepository": "https://github.com/juanmoisesd/attitudes-towards-open-science-and-data-sharing-global-dataset-of-researcher-sur",
+  "dateCreated": "2026-03-20",
+  "dateModified": "2026-03-20",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "version": "1.0.0",
   "author": [
     {
       "@type": "Person",
-      "givenName": "Juan Mois\u00e9s",
+      "givenName": "Juan Moisés",
       "familyName": "de la Serna Tuya",
-      "@id": "https://orcid.org/0000-0002-8401-8018"
+      "@id": "https://orcid.org/0000-0002-8401-8018",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Universidad Internacional de La Rioja (UNIR)"
+      },
+      "email": "juanmoises.delaserna@unir.net"
     }
   ],
-  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
   "keywords": [
-    "open science",
-    "data sharing",
-    "GDP"
-  ]
+    "cc0",
+    "data-sharing",
+    "dataset",
+    "gdp",
+    "open-data",
+    "open-science",
+    "zenodo"
+  ],
+  "programmingLanguage": "HTML",
+  "maintainer": [
+    {
+      "@type": "Person",
+      "givenName": "Juan Moisés",
+      "familyName": "de la Serna Tuya"
+    }
+  ],
+  "funder": {
+    "@type": "Organization",
+    "name": "Universidad Internacional de La Rioja (UNIR)"
+  }
 }
