@@ -1,0 +1,11 @@
+cc0, data-sharing, dataset, gdp, open-data, open-science, zenodo
+open-data
+dataset
+research
+science
+FAIR
+reproducibility
+open-science
+academic
+citation
+DOI
