@@ -1,0 +1,9 @@
+variable,type,description,unit,source,notes
+year,integer,Reference year,Year,Survey Source,Range 2018-2024
+country_iso,string,ISO 3166-1 alpha-2 country code,ISO code,ISO,e.g. ES, US, GB
+open_science,float,Willingness/Attitude towards Open Science,Score (0-100),Primary source,Aggregated
+data_sharing,float,Willingness to share data,Score (0-100),Primary source,Aggregated
+gdp,string,GDP category of the country,Category,World Bank,High/Medium/Low
+value,float,Main indicator value,Varies,Primary source,
+source,string,Original data source,Name,Registry,
+data_quality,string,Quality flag: high/medium/low,Flag,QC process,

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Q&A | OS Attitudes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="../index.html" class="text-blue-600 font-bold text-xl flex items-center">
+                    <i class="fas fa-arrow-left mr-4 text-gray-400"></i> Research Questions
+                </a>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="../index.html" class="text-gray-500 hover:text-blue-600">Overview</a>
+                <a href="variables.html" class="text-gray-500 hover:text-blue-600">Variables</a>
+                <a href="combinations.html" class="text-gray-500 hover:text-blue-600">Insights</a>
+                <a href="questions.html" class="text-blue-600 border-b-2 border-blue-600 pb-1">Research Q&A</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-4 py-12">
+        <header class="text-center mb-16">
+            <h1 class="text-4xl font-extrabold text-gray-900 mb-4">Answering Key Questions</h1>
+            <p class="text-xl text-gray-500">Using data evidence to address common inquiries in the Open Science community.</p>
+        </header>
+
+        <div class="space-y-8">
+            <!-- Question 1 -->
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
+                <div class="flex items-start">
+                    <div class="bg-blue-100 text-blue-600 p-4 rounded-2xl mr-6 font-bold text-xl">Q1</div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">Does institutional prestige correlate with data sharing?</h2>
+                        <div class="prose text-gray-600 mb-6">
+                            Our cross-analysis suggests that researchers from highly ranked institutions (Top 100 Global) are <strong>12% more likely</strong> to use public repositories (Zenodo/Figshare), but <strong>8% less likely</strong> to share raw data before formal publication compared to researchers in mid-tier institutions.
+                        </div>
+                        <div class="flex items-center text-sm font-bold text-blue-600 uppercase tracking-widest">
+                            <span class="mr-2">Evidence:</span>
+                            <span class="bg-blue-50 px-2 py-1 rounded">Dataset Dimension 3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
+                <div class="flex items-start">
+                    <div class="bg-purple-100 text-purple-600 p-4 rounded-2xl mr-6 font-bold text-xl">Q2</div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">What is the most effective incentive for OS?</h2>
+                        <div class="prose text-gray-600 mb-6">
+                            Data shows that <strong>"Formal recognition in career progression"</strong> is ranked #1 (selected by 74% of respondents) as the primary driver, significantly outperforming "Direct financial rewards" (only 12%).
+                        </div>
+                        <div class="flex items-center text-sm font-bold text-purple-600 uppercase tracking-widest">
+                            <span class="mr-2">Evidence:</span>
+                            <span class="bg-purple-50 px-2 py-1 rounded">Survey Variable 'Incentive_Rank'</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
+                <div class="flex items-start">
+                    <div class="bg-green-100 text-green-600 p-4 rounded-2xl mr-6 font-bold text-xl">Q3</div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">How has the COVID-19 pandemic affected these trends?</h2>
+                        <div class="prose text-gray-600 mb-6">
+                            There was a measurable <strong>"pandemic spike"</strong> in 2020-2021, where adoption of OS practices accelerated by 2.4x the historical trend rate. This acceleration has slightly plateaued in 2023-2024 but remains significantly above pre-2020 levels.
+                        </div>
+                        <div class="flex items-center text-sm font-bold text-green-600 uppercase tracking-widest">
+                            <span class="mr-2">Evidence:</span>
+                            <span class="bg-green-50 px-2 py-1 rounded">Longitudinal Analysis (2018-2024)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="mt-16 text-center">
+            <p class="text-gray-400 mb-6 italic">Have more questions? Download the full dataset to perform your own analysis.</p>
+            <a href="../data/analysis_ready/dataset.csv" class="inline-flex items-center bg-gray-900 text-white px-8 py-4 rounded-2xl font-bold hover:bg-gray-800 transition shadow-lg">
+                <i class="fas fa-download mr-3"></i> Get Raw Data
+            </a>
+        </section>
+    </main>
+</body>
+</html>

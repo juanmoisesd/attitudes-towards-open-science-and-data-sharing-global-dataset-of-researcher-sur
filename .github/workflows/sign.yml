@@ -1,0 +1,18 @@
+name: Sign Artifacts
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  sign:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Install Cosign
+      uses: sigstore/cosign-installer@main
+    - name: Sign Dataset
+      run: |
+        # In a real environment, the key would be stored in GitHub Secrets
+        # cosign sign-blob --key <(echo "${{ secrets.COSIGN_PRIVATE_KEY }}") data/analysis_ready/dataset.csv
+        echo "Signing placeholder - COSIGN_PRIVATE_KEY secret required"

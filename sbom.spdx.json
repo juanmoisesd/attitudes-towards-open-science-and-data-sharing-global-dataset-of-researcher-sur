@@ -1,0 +1,15 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "name": "Attitudes towards Open Science Repository",
+  "packages": [
+    {
+      "name": "pandas",
+      "versionInfo": "2.2.0"
+    },
+    {
+      "name": "matplotlib",
+      "versionInfo": "3.8.2"
+    }
+  ]
+}
