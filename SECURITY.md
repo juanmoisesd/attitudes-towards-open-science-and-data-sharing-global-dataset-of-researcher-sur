@@ -7,7 +7,3 @@ If you discover a security vulnerability within this repository, please send an 
 | Version | Supported |
 | ------- | --------- |
 | 1.x.x   | ✅ Yes    |
-| < 1.0.0 | ❌ No     |
-
-## Scope
-This policy covers the data files, analysis scripts, and CI/CD workflows contained in this repository.

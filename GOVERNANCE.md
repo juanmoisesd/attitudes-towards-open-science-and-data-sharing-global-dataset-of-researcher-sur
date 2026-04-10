@@ -7,6 +7,3 @@
 
 ## Decision Making
 Major changes to the dataset schema or project scope are decided by the Project Lead after community consultation via GitHub Issues.
-
-## Transparency
-All changes are tracked via git commits. Releases are documented and signed.
