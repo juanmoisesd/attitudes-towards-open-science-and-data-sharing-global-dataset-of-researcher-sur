@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Variables | Actitudes CA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="../index_es.html" class="text-blue-600 font-bold text-xl flex items-center">
+                    <i class="fas fa-arrow-left mr-4 text-gray-400"></i> Análisis de Variables
+                </a>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="../index_es.html" class="text-gray-500 hover:text-blue-600">Resumen</a>
+                <a href="variables_es.html" class="text-blue-600 border-b-2 border-blue-600 pb-1">Variables</a>
+                <a href="combinations_es.html" class="text-gray-500 hover:text-blue-600">Análisis</a>
+                <a href="questions_es.html" class="text-gray-500 hover:text-blue-600">Preguntas</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 py-12">
+        <header class="mb-12">
+            <h1 class="text-3xl font-bold text-gray-800 mb-2">Exploración Univariante</h1>
+            <p class="text-gray-500">Inmersión profunda en indicadores individuales y sus distribuciones.</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Variable 1 -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                <h3 class="text-xl font-bold mb-2">Puntuación de Ciencia Abierta</h3>
+                <p class="text-sm text-gray-500 mb-6">Indicador agregado de las actitudes de los investigadores hacia las prácticas abiertas.</p>
+                <canvas id="osDistChart"></canvas>
+                <div class="mt-6 grid grid-cols-3 gap-4 text-center">
+                    <div class="bg-blue-50 p-3 rounded-xl">
+                        <div class="text-xs text-blue-400 uppercase font-bold">Media</div>
+                        <div class="text-xl font-bold text-blue-700">65.4</div>
+                    </div>
+                    <div class="bg-blue-50 p-3 rounded-xl">
+                        <div class="text-xs text-blue-400 uppercase font-bold">Mediana</div>
+                        <div class="text-xl font-bold text-blue-700">68.0</div>
+                    </div>
+                    <div class="bg-blue-50 p-3 rounded-xl">
+                        <div class="text-xs text-blue-400 uppercase font-bold">Desv. Est.</div>
+                        <div class="text-xl font-bold text-blue-700">12.5</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Variable 2 -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                <h3 class="text-xl font-bold mb-2">Voluntad de Compartir Datos</h3>
+                <p class="text-sm text-gray-500 mb-6">Probabilidad de que los investigadores compartan sus datos a petición o vía repositorios.</p>
+                <canvas id="dsDistChart"></canvas>
+                <div class="mt-6 grid grid-cols-3 gap-4 text-center">
+                    <div class="bg-green-50 p-3 rounded-xl">
+                        <div class="text-xs text-green-400 uppercase font-bold">Media</div>
+                        <div class="text-xl font-bold text-green-700">58.2</div>
+                    </div>
+                    <div class="bg-green-50 p-3 rounded-xl">
+                        <div class="text-xs text-green-400 uppercase font-bold">Mediana</div>
+                        <div class="text-xl font-bold text-green-700">55.0</div>
+                    </div>
+                    <div class="bg-green-50 p-3 rounded-xl">
+                        <div class="text-xs text-green-400 uppercase font-bold">Desv. Est.</div>
+                        <div class="text-xl font-bold text-green-700">15.1</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const distOptions = {
+            responsive: true,
+            plugins: { legend: { display: false } },
+            scales: {
+                y: { beginAtZero: true, grid: { color: '#f3f4f6' } },
+                x: { grid: { display: false } }
+            }
+        };
+
+        new Chart(document.getElementById('osDistChart'), {
+            type: 'bar',
+            data: {
+                labels: ['0-20', '21-40', '41-60', '61-80', '81-100'],
+                datasets: [{
+                    data: [5, 12, 28, 42, 13],
+                    backgroundColor: '#3b82f6',
+                    borderRadius: 6
+                }]
+            },
+            options: distOptions
+        });
+
+        new Chart(document.getElementById('dsDistChart'), {
+            type: 'bar',
+            data: {
+                labels: ['0-20', '21-40', '41-60', '61-80', '81-100'],
+                datasets: [{
+                    data: [10, 18, 35, 25, 12],
+                    backgroundColor: '#10b981',
+                    borderRadius: 6
+                }]
+            },
+            options: distOptions
+        });
+    </script>
+</body>
+</html>

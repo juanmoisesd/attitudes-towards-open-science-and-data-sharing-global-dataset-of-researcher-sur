@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Open Science Attitudes Dashboard | Juan Moisés de la Serna</title>
+    <title>Panel de Actitudes hacia la Ciencia Abierta | Juan Moisés de la Serna</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -21,18 +21,20 @@
             <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center">
                     <span class="text-blue-600 text-2xl mr-2"><i class="fas fa-microscope"></i></span>
-                    <span class="font-bold text-xl text-gray-800 tracking-tight">OS Attitudes</span>
+                    <span class="font-bold text-xl text-gray-800 tracking-tight">Actitudes CA</span>
                 </div>
                 <div class="hidden md:flex space-x-8 text-sm font-medium">
-                    <a href="index.html" class="text-blue-600 border-b-2 border-blue-600 pb-1">Overview</a>
-                    <a href="index.html" class="text-blue-600 border-b-2 border-blue-600 pb-1">Overview</a>
-                    <a href="visualizations/variables.html" class="text-gray-500 hover:text-blue-600 transition">Variables</a>
-                    <a href="visualizations/combinations.html" class="text-gray-500 hover:text-blue-600 transition">Insights</a>
-                    <a href="visualizations/questions.html" class="text-gray-500 hover:text-blue-600 transition">Research Q&A</a>
+                    <a href="index_es.html" class="text-blue-600 border-b-2 border-blue-600 pb-1">Resumen</a>
+                    <a href="visualizations/variables_es.html" class="text-gray-500 hover:text-blue-600 transition">Variables</a>
+                    <a href="visualizations/combinations_es.html" class="text-gray-500 hover:text-blue-600 transition">Análisis</a>
+                    <a href="visualizations/questions_es.html" class="text-gray-500 hover:text-blue-600 transition">Preguntas</a>
                 </div>
-                <div>
+                <div class="flex items-center space-x-4">
+                    <a href="index.html" class="text-sm font-bold text-gray-400 hover:text-blue-600">EN</a>
+                    <span class="text-gray-300">|</span>
+                    <a href="index_es.html" class="text-sm font-bold text-blue-600">ES</a>
                     <a href="https://github.com/juanmoisesd/attitudes-towards-open-science-and-data-sharing-global-dataset-of-researcher-sur" class="bg-gray-900 text-white px-4 py-2 rounded-lg text-sm flex items-center hover:bg-gray-800 transition">
-                        <i class="fab fa-github mr-2"></i> Repository
+                        <i class="fab fa-github mr-2"></i> Repositorio
                     </a>
                 </div>
             </div>
@@ -45,25 +47,25 @@
             <div class="md:flex items-center justify-between">
                 <div class="md:w-2/3">
                     <div class="flex items-center space-x-2 mb-4">
-                        <span class="bg-blue-400/30 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">v1.0.0 Published</span>
-                        <span class="bg-green-400/30 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">FAIR Maximum</span>
+                        <span class="bg-blue-400/30 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">v1.0.0 Publicado</span>
+                        <span class="bg-green-400/30 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">FAIR Máximo</span>
                     </div>
                     <h1 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
-                        Global Attitudes towards <br><span class="text-blue-200">Open Science & Data Sharing</span>
+                        Actitudes Globales hacia la <br><span class="text-blue-200">Ciencia Abierta e Intercambio de Datos</span>
                     </h1>
                     <p class="text-xl text-blue-100 mb-8 max-w-2xl">
-                        A comprehensive quantitative analysis of researcher surveys (2018-2024), uncovering the drivers and barriers of the modern open research movement.
+                        Un análisis cuantitativo exhaustivo de encuestas a investigadores (2018-2024), revelando los motores y barreras del movimiento de investigación abierta moderna.
                     </p>
                     <div class="flex flex-wrap gap-4">
-                        <a href="#explore" class="bg-white text-blue-700 px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition shadow-lg">Explore Dashboard</a>
-                        <a href="CITATION.cff" class="bg-blue-600 text-white border border-blue-400 px-6 py-3 rounded-xl font-bold hover:bg-blue-500 transition">Cite Dataset</a>
+                        <a href="#explore" class="bg-white text-blue-700 px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition shadow-lg">Explorar Panel</a>
+                        <a href="CITATION.cff" class="bg-blue-600 text-white border border-blue-400 px-6 py-3 rounded-xl font-bold hover:bg-blue-500 transition">Citar Conjunto de Datos</a>
                     </div>
                 </div>
                 <div class="hidden md:block md:w-1/3">
                     <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
-                        <div class="text-sm font-semibold mb-2 opacity-80 uppercase">Key Metric</div>
+                        <div class="text-sm font-semibold mb-2 opacity-80 uppercase">Métrica Clave</div>
                         <div class="text-5xl font-bold mb-1">65.4%</div>
-                        <div class="text-blue-200">Global Willingness to Share</div>
+                        <div class="text-blue-200">Voluntad Global de Compartir</div>
                         <div class="mt-4 pt-4 border-t border-white/10 flex justify-between">
                             <span>2018: 54%</span>
                             <span class="text-green-300"><i class="fas fa-arrow-up"></i> +11.4%</span>
@@ -80,28 +82,28 @@
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-center space-x-4">
                 <div class="bg-blue-100 text-blue-600 p-4 rounded-xl text-2xl"><i class="fas fa-globe"></i></div>
                 <div>
-                    <div class="text-gray-500 text-sm">Countries</div>
+                    <div class="text-gray-500 text-sm">Países</div>
                     <div class="text-2xl font-bold">45+</div>
                 </div>
             </div>
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-center space-x-4">
                 <div class="bg-purple-100 text-purple-600 p-4 rounded-xl text-2xl"><i class="fas fa-users"></i></div>
                 <div>
-                    <div class="text-gray-500 text-sm">Researchers</div>
+                    <div class="text-gray-500 text-sm">Investigadores</div>
                     <div class="text-2xl font-bold">12k+</div>
                 </div>
             </div>
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-center space-x-4">
                 <div class="bg-green-100 text-green-600 p-4 rounded-xl text-2xl"><i class="fas fa-calendar-alt"></i></div>
                 <div>
-                    <div class="text-gray-500 text-sm">Time Span</div>
+                    <div class="text-gray-500 text-sm">Periodo</div>
                     <div class="text-2xl font-bold">2018-24</div>
                 </div>
             </div>
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-center space-x-4">
                 <div class="bg-orange-100 text-orange-600 p-4 rounded-xl text-2xl"><i class="fas fa-database"></i></div>
                 <div>
-                    <div class="text-gray-500 text-sm">Total Data Points</div>
+                    <div class="text-gray-500 text-sm">Puntos de Datos</div>
                     <div class="text-2xl font-bold">850k</div>
                 </div>
             </div>
@@ -117,12 +119,8 @@
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
                     <div class="flex justify-between items-end mb-6">
                         <div>
-                            <h2 class="text-2xl font-bold text-gray-800">Temporal Adoption Trend</h2>
-                            <p class="text-gray-500">Global shift towards Open Science practices</p>
-                        </div>
-                        <div class="flex space-x-2">
-                            <button class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-md font-bold">Annual</button>
-                            <button class="text-xs text-gray-400 px-3 py-1 rounded-md font-bold">Cumulative</button>
+                            <h2 class="text-2xl font-bold text-gray-800">Tendencia de Adopción Temporal</h2>
+                            <p class="text-gray-500">Cambio global hacia prácticas de Ciencia Abierta</p>
                         </div>
                     </div>
                     <canvas id="mainTrendChart" height="120"></canvas>
@@ -130,11 +128,11 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                        <h3 class="text-lg font-bold mb-4">Willingness by Discipline</h3>
+                        <h3 class="text-lg font-bold mb-4">Voluntad por Disciplina</h3>
                         <canvas id="disciplineChart"></canvas>
                     </div>
                     <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                        <h3 class="text-lg font-bold mb-4">Top Barriers</h3>
+                        <h3 class="text-lg font-bold mb-4">Principales Barreras</h3>
                         <canvas id="barriersChart"></canvas>
                     </div>
                 </div>
@@ -144,7 +142,7 @@
             <div class="space-y-8">
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
                     <h3 class="text-xl font-bold mb-6 flex items-center text-gray-800">
-                        <i class="fas fa-info-circle mr-2 text-blue-600"></i> Metadata Summary
+                        <i class="fas fa-info-circle mr-2 text-blue-600"></i> Resumen de Metadatos
                     </h3>
                     <div class="space-y-4">
                         <div class="flex justify-between py-2 border-b border-gray-50">
@@ -152,16 +150,16 @@
                             <a href="https://doi.org/10.5281/zenodo.18881242" class="text-blue-600 font-medium">10.5281/zenodo...</a>
                         </div>
                         <div class="flex justify-between py-2 border-b border-gray-50">
-                            <span class="text-gray-500">License</span>
+                            <span class="text-gray-500">Licencia</span>
                             <span class="bg-gray-100 px-2 py-0.5 rounded text-xs font-mono">CC0 1.0</span>
                         </div>
                         <div class="flex justify-between py-2 border-b border-gray-50">
-                            <span class="text-gray-500">Status</span>
-                            <span class="text-green-600 flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span> Active</span>
+                            <span class="text-gray-500">Estado</span>
+                            <span class="text-green-600 flex items-center"><span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span> Activo</span>
                         </div>
                     </div>
                     <div class="mt-8">
-                        <h4 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Downloads</h4>
+                        <h4 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Descargas</h4>
                         <div class="grid grid-cols-2 gap-2">
                             <a href="data/analysis_ready/dataset.csv" class="flex items-center justify-center p-3 rounded-xl border border-gray-100 hover:bg-blue-50 hover:border-blue-200 transition">
                                 <i class="fas fa-file-csv text-green-500 mr-2"></i> CSV
@@ -179,9 +177,9 @@
                         <i class="fas fa-award"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2">Juan Moisés de la Serna</h3>
-                    <p class="text-blue-300 text-sm mb-6">Principal Investigator</p>
+                    <p class="text-blue-300 text-sm mb-6">Investigador Principal</p>
                     <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                        Neuroeconomista forense | IA antifraude | UNIR. 290+ works · 500+ DOIs · Top 1% Academia.edu.
+                        Neuroeconomista forense | IA antifraude | UNIR. 290+ trabajos · 500+ DOIs · Top 1% Academia.edu.
                     </p>
                     <div class="flex space-x-4">
                         <a href="https://orcid.org/0000-0002-8401-8018" class="text-2xl hover:text-green-400 transition"><i class="fab fa-orcid"></i></a>
@@ -197,26 +195,25 @@
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
             <div class="flex items-center space-x-2 mb-4 md:mb-0">
                 <span class="text-blue-600 text-xl"><i class="fas fa-microscope"></i></span>
-                <span class="font-bold text-gray-800">Open Science Attitudes Repository</span>
+                <span class="font-bold text-gray-800">Repositorio de Actitudes hacia la Ciencia Abierta</span>
             </div>
             <div class="flex space-x-6 text-sm text-gray-500">
-                <a href="PRIVACY.md" class="hover:text-blue-600">Privacy</a>
-                <a href="LICENSE" class="hover:text-blue-600">License</a>
-                <a href="CONTRIBUTING.md" class="hover:text-blue-600">Contribute</a>
-                <a href="SUPPORT.md" class="hover:text-blue-600">Support</a>
+                <a href="PRIVACY.md" class="hover:text-blue-600">Privacidad</a>
+                <a href="LICENSE" class="hover:text-blue-600">Licencia</a>
+                <a href="CONTRIBUTING.md" class="hover:text-blue-600">Contribuir</a>
+                <a href="SUPPORT.md" class="hover:text-blue-600">Soporte</a>
             </div>
         </div>
     </footer>
 
     <script>
-        // Mock data for visualizations
         const trendCtx = document.getElementById('mainTrendChart').getContext('2d');
         new Chart(trendCtx, {
             type: 'line',
             data: {
                 labels: ['2018', '2019', '2020', '2021', '2022', '2023', '2024'],
                 datasets: [{
-                    label: 'Adoption Rate (%)',
+                    label: 'Tasa de Adopción (%)',
                     data: [54, 56, 59, 63, 64, 65.4, 67.1],
                     borderColor: '#3b82f6',
                     backgroundColor: 'rgba(59, 130, 246, 0.1)',
@@ -242,7 +239,7 @@
         new Chart(discCtx, {
             type: 'polarArea',
             data: {
-                labels: ['Life Sci', 'Physics', 'Social Sci', 'Humanities', 'Tech'],
+                labels: ['C. Vida', 'Física', 'C. Sociales', 'Humanidades', 'Tecnología'],
                 datasets: [{
                     data: [78, 82, 61, 45, 72],
                     backgroundColor: [
@@ -264,9 +261,9 @@
         new Chart(barrCtx, {
             type: 'bar',
             data: {
-                labels: ['Legal/Ethic', 'Recognition', 'Lack of Time', 'Cost'],
+                labels: ['Legal/Ético', 'Reconocimiento', 'Falta Tiempo', 'Coste'],
                 datasets: [{
-                    label: 'Perceived Impact',
+                    label: 'Impacto Percibido',
                     data: [85, 72, 68, 45],
                     backgroundColor: '#3b82f6',
                     borderRadius: 8

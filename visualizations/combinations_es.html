@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Combinaciones | Actitudes CA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="../index_es.html" class="text-blue-600 font-bold text-xl flex items-center">
+                    <i class="fas fa-arrow-left mr-4 text-gray-400"></i> Análisis Bivariante
+                </a>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="../index_es.html" class="text-gray-500 hover:text-blue-600">Resumen</a>
+                <a href="variables_es.html" class="text-gray-500 hover:text-blue-600">Variables</a>
+                <a href="combinations_es.html" class="text-blue-600 border-b-2 border-blue-600 pb-1">Análisis</a>
+                <a href="questions_es.html" class="text-gray-500 hover:text-blue-600">Preguntas</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 py-12">
+        <header class="mb-12">
+            <h1 class="text-3xl font-bold text-gray-800 mb-2">Relaciones Multivariantes</h1>
+            <p class="text-gray-500">Descubriendo correlaciones y patrones entre factores socioeconómicos y la adopción de Ciencia Abierta.</p>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                <h3 class="text-xl font-bold mb-6">Ciencia Abierta vs Nivel Económico (PIB)</h3>
+                <canvas id="osVsGdpChart"></canvas>
+                <div class="mt-6 p-4 bg-blue-50 rounded-xl text-sm text-blue-800">
+                    <i class="fas fa-lightbulb mr-2"></i> <strong>Observación:</strong> Los países con PIB alto muestran una adopción un 15% superior, pero los países con PIB medio muestran el crecimiento interanual más rápido.
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                <h3 class="text-xl font-bold mb-6">Voluntad vs Adopción Práctica</h3>
+                <canvas id="correlationScatterChart"></canvas>
+                <div class="mt-6 p-4 bg-green-50 rounded-xl text-sm text-green-800">
+                    <i class="fas fa-lightbulb mr-2"></i> <strong>Observación:</strong> Fuerte correlación (r=0.82) entre la actitud general hacia la Ciencia Abierta y la voluntad específica de compartir datos.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        new Chart(document.getElementById('osVsGdpChart'), {
+            type: 'bar',
+            data: {
+                labels: ['PIB Alto', 'PIB Medio', 'PIB Bajo'],
+                datasets: [
+                    { label: 'Ciencia Abierta', data: [72, 64, 48], backgroundColor: '#3b82f6' },
+                    { label: 'Compartir Datos', data: [65, 58, 42], backgroundColor: '#10b981' }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: { legend: { position: 'bottom' } },
+                scales: { y: { beginAtZero: true } }
+            }
+        });
+
+        new Chart(document.getElementById('correlationScatterChart'), {
+            type: 'scatter',
+            data: {
+                datasets: [{
+                    label: 'Países',
+                    data: Array.from({length: 40}, () => ({
+                        x: 40 + Math.random() * 50,
+                        y: 35 + Math.random() * 55
+                    })),
+                    backgroundColor: 'rgba(139, 92, 246, 0.6)'
+                }]
+            },
+            options: {
+                scales: {
+                    x: { title: { display: true, text: 'Puntuación Ciencia Abierta' } },
+                    y: { title: { display: true, text: 'Voluntad Compartir Datos' } }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

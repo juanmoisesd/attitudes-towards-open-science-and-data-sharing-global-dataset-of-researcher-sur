@@ -1,0 +1,2 @@
+# DEPRECATION_POLICY.md
+Documentation for DEPRECATION_POLICY.md.

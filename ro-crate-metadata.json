@@ -1,46 +1,4 @@
 {
   "@context": "https://w3id.org/ro/crate/1.1/context",
-  "@graph": [
-    {
-      "@type": "CreativeWork",
-      "@id": "ro-crate-metadata.json",
-      "conformsTo": {
-        "@id": "https://w3id.org/ro/crate/1.1"
-      },
-      "about": {
-        "@id": "./"
-      }
-    },
-    {
-      "@type": [
-        "Dataset"
-      ],
-      "@id": "./",
-      "name": "This dataset compiles quantitative data from international surveys (2018-2024) on attitudes of academic researchers towards open science and data sharing. Includes five key analytical dimensions: (1) Willingness to share data by discipline; (2) Repos",
-      "description": "This dataset compiles quantitative data from international surveys (2018-2024) on attitudes of academic researchers towards open science and data sharing. Includes five key analytical dimensions: (1) Willingness to share data by discipline; (2) Repos",
-      "datePublished": "2026-03-20",
-      "license": {
-        "@id": "https://creativecommons.org/publicdomain/zero/1.0/"
-      },
-      "author": {
-        "@id": "https://orcid.org/0000-0002-8401-8018"
-      },
-      "url": "https://github.com/juanmoisesd/attitudes-towards-open-science-and-data-sharing-global-dataset-of-researcher-sur",
-      "keywords": "cc0, data-sharing, dataset, gdp, open-data, open-science, zenodo"
-    },
-    {
-      "@type": "Person",
-      "@id": "https://orcid.org/0000-0002-8401-8018",
-      "name": "Juan Moisés de la Serna Tuya",
-      "affiliation": {
-        "@id": "https://ror.org/0063t5s24"
-      },
-      "email": "juanmoises.delaserna@unir.net"
-    },
-    {
-      "@type": "CreativeWork",
-      "@id": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "name": "CC0 1.0 Universal"
-    }
-  ]
+  "@graph": []
 }
