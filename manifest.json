@@ -1,0 +1,8 @@
+{
+  "manifest_version": "1.0",
+  "generated_at": "2026-03-05T15:00:00Z",
+  "files": [
+    { "path": "README.md", "hash": "sha256:..." },
+    { "path": "data/analysis_ready/dataset.csv", "hash": "sha256:..." }
+  ]
+}

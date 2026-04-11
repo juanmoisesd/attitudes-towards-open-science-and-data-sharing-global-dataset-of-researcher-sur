@@ -1,0 +1,29 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  "name": "Attitudes towards Open Science and Data Sharing: Global Dataset of Researcher Surveys (2018-2024)",
+  "description": "This dataset compiles quantitative data from international surveys (2018-2024) on attitudes of academic researchers towards open science and data sharing.",
+  "url": "https://github.com/juanmoisesd/attitudes-towards-open-science-and-data-sharing-global-dataset-of-researcher-sur",
+  "identifier": [
+    "https://doi.org/10.5281/zenodo.18881242"
+  ],
+  "keywords": [
+    "Open Science",
+    "Data Sharing",
+    "Research Management"
+  ],
+  "creator": {
+    "@type": "Person",
+    "name": "Juan Moisés de la Serna Tuya",
+    "givenName": "Juan Moisés",
+    "familyName": "de la Serna Tuya",
+    "sameAs": "https://orcid.org/0000-0002-8401-8018"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Zenodo"
+  },
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "version": "1.0.0",
+  "isAccessibleForFree": true
+}

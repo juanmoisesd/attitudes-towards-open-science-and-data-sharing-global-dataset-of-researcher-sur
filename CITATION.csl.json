@@ -1,0 +1,25 @@
+[
+  {
+    "id": "delaserna2026_attitudes",
+    "type": "dataset",
+    "title": "Attitudes towards Open Science and Data Sharing: Global Dataset of Researcher Surveys (2018-2024)",
+    "author": [
+      {
+        "family": "de la Serna Tuya",
+        "given": "Juan Moisés"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          5
+        ]
+      ]
+    },
+    "publisher": "Zenodo",
+    "DOI": "10.5281/zenodo.18881242",
+    "URL": "https://doi.org/10.5281/zenodo.18881242"
+  }
+]

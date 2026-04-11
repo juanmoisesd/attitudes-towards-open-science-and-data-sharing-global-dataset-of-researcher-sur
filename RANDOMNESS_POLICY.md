@@ -1,0 +1,2 @@
+# RANDOMNESS_POLICY.md
+Documentation for RANDOMNESS_POLICY.md.

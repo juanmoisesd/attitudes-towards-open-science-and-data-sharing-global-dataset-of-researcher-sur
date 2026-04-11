@@ -1,0 +1,3 @@
+# Abstract
+
+This dataset compiles quantitative data from international surveys (2018-2024) on the attitudes of academic researchers towards open science and data sharing. The study covers five key analytical dimensions: willingness to share data by academic discipline; awareness and use rates of data repositories (such as Zenodo, Dataverse, OSF, Figshare, Dryad, and GitHub); perceived barriers to data sharing (including legal, ethical, and recognition issues); incentives required to encourage open practices; and the temporal evolution of these attitudes. The results provide an empirical basis for the development of open science policies and research data management strategies at a global level.

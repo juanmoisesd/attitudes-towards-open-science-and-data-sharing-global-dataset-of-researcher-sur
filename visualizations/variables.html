@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Analysis | OS Attitudes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="../index.html" class="text-blue-600 font-bold text-xl flex items-center">
+                    <i class="fas fa-arrow-left mr-4 text-gray-400"></i> Variable Analysis
+                </a>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="../index.html" class="text-gray-500 hover:text-blue-600">Overview</a>
+                <a href="variables.html" class="text-blue-600 border-b-2 border-blue-600 pb-1">Variables</a>
+                <a href="combinations.html" class="text-gray-500 hover:text-blue-600">Insights</a>
+                <a href="questions.html" class="text-gray-500 hover:text-blue-600">Research Q&A</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 py-12">
+        <header class="mb-12">
+            <h1 class="text-3xl font-bold text-gray-800 mb-2">Univariate Exploration</h1>
+            <p class="text-gray-500">Deep dive into individual indicators and their distributions.</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Variable 1 -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                <h3 class="text-xl font-bold mb-2">Open Science Score</h3>
+                <p class="text-sm text-gray-500 mb-6">Aggregate indicator of researcher attitudes towards open practices.</p>
+                <canvas id="osDistChart"></canvas>
+                <div class="mt-6 grid grid-cols-3 gap-4 text-center">
+                    <div class="bg-blue-50 p-3 rounded-xl">
+                        <div class="text-xs text-blue-400 uppercase font-bold">Mean</div>
+                        <div class="text-xl font-bold text-blue-700">65.4</div>
+                    </div>
+                    <div class="bg-blue-50 p-3 rounded-xl">
+                        <div class="text-xs text-blue-400 uppercase font-bold">Median</div>
+                        <div class="text-xl font-bold text-blue-700">68.0</div>
+                    </div>
+                    <div class="bg-blue-50 p-3 rounded-xl">
+                        <div class="text-xs text-blue-400 uppercase font-bold">Std Dev</div>
+                        <div class="text-xl font-bold text-blue-700">12.5</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Variable 2 -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                <h3 class="text-xl font-bold mb-2">Data Sharing Willingness</h3>
+                <p class="text-sm text-gray-500 mb-6">Likelihood of researchers to share their datasets upon request or via repositories.</p>
+                <canvas id="dsDistChart"></canvas>
+                <div class="mt-6 grid grid-cols-3 gap-4 text-center">
+                    <div class="bg-green-50 p-3 rounded-xl">
+                        <div class="text-xs text-green-400 uppercase font-bold">Mean</div>
+                        <div class="text-xl font-bold text-green-700">58.2</div>
+                    </div>
+                    <div class="bg-green-50 p-3 rounded-xl">
+                        <div class="text-xs text-green-400 uppercase font-bold">Median</div>
+                        <div class="text-xl font-bold text-green-700">55.0</div>
+                    </div>
+                    <div class="bg-green-50 p-3 rounded-xl">
+                        <div class="text-xs text-green-400 uppercase font-bold">Std Dev</div>
+                        <div class="text-xl font-bold text-green-700">15.1</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="mt-12 bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold mb-6">Categorical Breakdowns</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-sm font-bold text-gray-400 mb-4 uppercase">GDP Category</h4>
+                    <canvas id="gdpPieChart"></canvas>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold text-gray-400 mb-4 uppercase">Data Quality Flags</h4>
+                    <canvas id="qualityPieChart"></canvas>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <div class="space-y-4">
+                        <div class="p-4 rounded-xl border border-gray-50 bg-gray-50/50">
+                            <div class="text-sm font-bold">High Data Reliability</div>
+                            <div class="w-full bg-gray-200 rounded-full h-2 mt-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 82%"></div>
+                            </div>
+                            <div class="text-xs text-right mt-1 text-gray-400">82% of records</div>
+                        </div>
+                        <div class="p-4 rounded-xl border border-gray-50 bg-gray-50/50">
+                            <div class="text-sm font-bold">International Coverage</div>
+                            <div class="w-full bg-gray-200 rounded-full h-2 mt-2">
+                                <div class="bg-purple-600 h-2 rounded-full" style="width: 45%"></div>
+                            </div>
+                            <div class="text-xs text-right mt-1 text-gray-400">45 Unique ISOs</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Distributions
+        const distOptions = {
+            responsive: true,
+            plugins: { legend: { display: false } },
+            scales: {
+                y: { beginAtZero: true, grid: { color: '#f3f4f6' } },
+                x: { grid: { display: false } }
+            }
+        };
+
+        new Chart(document.getElementById('osDistChart'), {
+            type: 'bar',
+            data: {
+                labels: ['0-20', '21-40', '41-60', '61-80', '81-100'],
+                datasets: [{
+                    data: [5, 12, 28, 42, 13],
+                    backgroundColor: '#3b82f6',
+                    borderRadius: 6
+                }]
+            },
+            options: distOptions
+        });
+
+        new Chart(document.getElementById('dsDistChart'), {
+            type: 'bar',
+            data: {
+                labels: ['0-20', '21-40', '41-60', '61-80', '81-100'],
+                datasets: [{
+                    data: [10, 18, 35, 25, 12],
+                    backgroundColor: '#10b981',
+                    borderRadius: 6
+                }]
+            },
+            options: distOptions
+        });
+
+        // Pies
+        new Chart(document.getElementById('gdpPieChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['High', 'Medium', 'Low'],
+                datasets: [{
+                    data: [65, 25, 10],
+                    backgroundColor: ['#3b82f6', '#8b5cf6', '#f59e0b']
+                }]
+            },
+            options: { plugins: { legend: { position: 'bottom' } }, cutout: '70%' }
+        });
+
+        new Chart(document.getElementById('qualityPieChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['High', 'Medium', 'Low'],
+                datasets: [{
+                    data: [82, 12, 6],
+                    backgroundColor: ['#10b981', '#f59e0b', '#ef4444']
+                }]
+            },
+            options: { plugins: { legend: { position: 'bottom' } }, cutout: '70%' }
+        });
+    </script>
+</body>
+</html>

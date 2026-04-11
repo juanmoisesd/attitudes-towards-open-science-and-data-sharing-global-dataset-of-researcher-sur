@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Attitudes towards Open Science Dataset Schema",
+  "type": "object",
+  "properties": {
+    "year": {
+      "type": "integer",
+      "minimum": 2018,
+      "maximum": 2024
+    },
+    "country_iso": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "open_science": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "data_sharing": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "gdp": {
+      "type": "string",
+      "enum": ["High", "Medium", "Low"]
+    }
+  },
+  "required": ["year", "country_iso"]
+}

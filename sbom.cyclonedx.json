@@ -1,0 +1,16 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "metadata": {
+    "component": {
+      "name": "Attitudes towards Open Science Repository",
+      "type": "data"
+    }
+  },
+  "components": [
+    {
+      "name": "pandas",
+      "version": "2.2.0"
+    }
+  ]
+}

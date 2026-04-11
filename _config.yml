@@ -1,43 +1,4 @@
-# Jekyll configuration for GitHub Pages
-title: "attitudes-towards-open-science-and-data-sharing-global-dataset-of-researcher-sur"
-description: "This dataset compiles quantitative data from international surveys (2018-2024) on attitudes of academic researchers towards open science and data sharing. Includes five key analytical dimensions: (1) Willingness to share data by discipline; (2) Repos"
-url: "https://juanmoisesd.github.io"
-baseurl: "/attitudes-towards-open-science-and-data-sharing-global-dataset-of-researcher-sur"
-
-author:
-  name: "Juan Moisés de la Serna Tuya"
-  orcid: "0000-0002-8401-8018"
-  linkedin: "https://www.linkedin.com/in/juanmoisesdelaserna/"
-  scopus: "26632846700"
-  institution: "Universidad Internacional de La Rioja (UNIR)"
-  email: "juanmoises.delaserna@unir.net"
-
-# SEO
-tagline: "Open Research Dataset"
-lang: "en"
-
-# Social
-twitter:
-  username: juanmoisesd
-  card: summary
-
-# Plugins
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-feed
-
-# Build
-theme: minima
-include:
-  - README.md
-  - GLOSSARY.md
-  - ABOUT_THE_AUTHOR.md
-  - CITATION_GUIDE.md
-
-# Exclude
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor
+# GitHub Pages configuration
+# Since we are using a custom HTML dashboard, we disable Jekyll to ensure
+# our index.html and visualization files are served exactly as they are.
+# To disable Jekyll, we can create a .nojekyll file in the root.
